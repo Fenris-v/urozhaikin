@@ -1,0 +1,313 @@
+@import "variables"
+@import "prefixes"
+/* RESET */
+@import "min-reset"
+
+.btn
+  padding: 0 20px
+  @include font($white, $bold, bold, $fontSmall, 40px)
+
+  &_green
+    background: $lightGreen
+
+    &:hover
+      background: $darkGreen
+      @include box-shadow()
+      cursor: pointer
+
+/* HEADER */
+.header
+  &_top
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 5px 0
+    margin-bottom: 25px
+
+    &__description
+      @include font($lightGreen, $extraBold, 800, $fontSmall, 16px)
+      display: flex
+      justify-content: flex-start
+      align-items: center
+
+      a
+        display: inline-block
+        margin-right: 0
+
+      p
+        padding-top: 20px
+        margin-left: 30px
+
+    &__mail
+      display: flex
+      align-items: center
+      padding-top: 20px
+
+      img
+        max-width: 20px
+        margin-right: 5px
+
+      a
+        @include font($darkGreen, $semiBold, 600, $fontSmall)
+        display: inline-block
+
+    &__phone
+      text-align: right
+      padding-top: 20px
+
+      a
+        @include font($darkGreen, $extraBold, 800, 24px)
+        display: inline-block
+
+        span
+          color: $lightGreen
+
+      p
+        @include font($grey, $extraBold, 800, $fontSmall)
+        text-transform: lowercase
+
+    .btn
+      margin-top: 20px
+
+  &__nav
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 15px
+
+    ul
+      display: flex
+      justify-content: space-between
+
+      li
+        margin-right: 30px
+
+      a
+        @include font($textBlack, $semiBold, 600, 16px)
+        padding: 5px 0
+        position: relative
+
+        &::after
+          position: absolute
+          content: ""
+          width: 0
+          height: 4px
+          bottom: 0
+          left: 0
+          background: $lightGreen
+          @include transition()
+
+        &:hover
+          cursor: pointer
+
+          &::after
+            width: 100%
+            @include transition()
+
+    &__geo
+      display: flex
+      justify-content: flex-end
+      align-items: center
+
+      img
+        max-width: 15px
+        margin-right: 5px
+
+      a
+        @include font($grey, $semiBold, 600, $fontSmall)
+        text-decoration: underline
+        white-space: nowrap
+
+/* MAIN PAGE */
+.s_firstScreen
+  margin-bottom: $margin
+
+.firstScreen
+  display: flex
+  justify-content: space-between
+
+  &_half
+    width: 49%
+
+    h1
+      @include font($blue, $extraBold, 800, 68px)
+      margin-bottom: 30px
+
+      span
+        white-space: nowrap
+        padding: 0 40px
+        line-height: 100px
+        color: $white
+        background: rgb(150,194,43)
+        background: linear-gradient(90deg, rgba(150,194,43,1) 0%, rgba(84,126,28,1) 60%)
+        margin-left: -30px
+        position: relative
+        z-index: 2
+
+    p
+      @include font($line: 24px)
+
+      span
+        @include font(#000000, $bold, bold)
+
+    img
+      width: 100%
+      +object-fit(cover)
+      position: relative
+      z-index: 1
+      min-height: 100%
+
+.innerTitle
+  @include font($darkGreen, $extraBold, 800, 48px, 1.2)
+
+  span
+    color: $lightGreen
+    font-size: 30px
+
+.s_advantages
+  margin-bottom: $margin
+
+.advantages
+  &__items
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+
+  &__item
+    width: 33%
+    margin-bottom: 5px
+
+    &_noHover
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+
+    a
+      display: flex
+      position: relative
+      overflow: hidden
+
+      &:hover
+        .advantages__item_noHover
+          bottom: 100%
+          @include transition()
+
+          .advantages__item__title
+            @include transition()
+            opacity: 0
+
+        .advantages__item_hover
+          top: 0
+          @include transition()
+
+          .advantages__item__title
+            color: $lightGreen
+            bottom: 100%
+            @include transition()
+            opacity: 1
+
+          p
+            opacity: 1
+            top: 60px
+            @include transition()
+
+        .advantages__item__icon
+          opacity: 0
+          @include transition()
+
+      img
+        position: relative
+        height: 250px
+        width: 100%
+        +object-fit(cover)
+
+      .advantages__item__icon
+        width: 50px
+        height: 50px
+        position: absolute
+        left: 30px
+        bottom: 80px
+        opacity: 1
+        @include transition()
+
+      .advantages__item_noHover
+        @include transition()
+
+        .advantages__item__title
+          @include font($white, $extraBold, 800, 24px)
+          position: absolute
+          left: 30px
+          bottom: 10px
+          @include transition()
+          height: 50px
+          overflow: hidden
+
+      .advantages__item_hover
+        @include transition()
+        position: absolute
+        top: 100%
+        left: 0
+        right: 0
+        bottom: 0
+        background: rgba(84,126,28, 0.7)
+        overflow: hidden
+
+        .advantages__item__title
+          @include font($white, $extraBold, 800, 24px)
+          opacity: 0
+          @include transition()
+          height: 50px
+          overflow: hidden
+          padding-left: 30px
+          padding-top: 30px
+          +box-sizing(content-box)
+
+        p
+          padding: 30px
+          opacity: 0
+          position: absolute
+          @include font($white, $regular, normal, 16px, 1.2)
+          @include transition()
+
+.s_how
+  max-width: 1920px
+  margin: 0 auto $margin
+  background: url("../images/main/sky.jpg") center top no-repeat
+  background-size: 100% 60%
+
+.how
+
+  .innerTitle
+    margin-bottom: 20px
+
+  &__schema
+    position: relative
+
+    img
+      width: 100%
+      +object-fit(contain)
+
+  &__number
+    background: $blue
+    @include font($white, $extraBold, 800, 30px, 34px)
+    width: 40px
+    height: 40px
+    border: 3px solid $white
+    @include box-shadow(0 0 10px rgba(0, 0, 0, 0.5))
+    +border-radius(50%)
+    text-align: center
+
+    &:hover
+      cursor: pointer
+      background: $lightGreen
+
+.how__one, .how__two, .how__three, .how__four, .how__five, .how__six, .how__seven
+  display: inline-block
+  position: relative
+
+/* RESPONSIVE */
+@import "responsive"
+/* HAMBURGER */
+@import "hamburger"
