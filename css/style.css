@@ -568,6 +568,9 @@ input[type=email] {
   background-size: 100% 60%;
 }
 
+.how {
+  padding-top: 60px;
+}
 .how .innerTitle {
   margin-bottom: 20px;
 }
@@ -588,7 +591,7 @@ input[type=email] {
   line-height: 34px;
   width: 40px;
   height: 40px;
-  border: 3px solid #ffffff;
+  border: 3px solid rgba(255, 255, 255, 0.5);
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -596,15 +599,178 @@ input[type=email] {
   -moz-border-radius: 50%;
   border-radius: 50%;
   text-align: center;
+  position: relative;
+  z-index: 1;
+  -moz-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  -webkit-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
 }
 .how__number:hover {
   cursor: pointer;
+  -moz-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  -webkit-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
   background: #96c22b;
+}
+.how__description {
+  background: #ffffff;
+  border: 6px solid rgba(255, 255, 255, 0.1);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-bottom: none;
+  padding: 15px 40px 25px 20px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  position: absolute;
+  width: 400px;
+  -moz-transform: translate(20px, -20px);
+  -ms-transform: translate(20px, -20px);
+  -o-transform: translate(20px, -20px);
+  -webkit-transform: translate(20px, -20px);
+  transform: translate(20px, -20px);
+  z-index: 0;
+  opacity: 0;
+  -moz-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  -webkit-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+  visibility: hidden;
+}
+.how__description__title {
+  font-size: 18px;
+  font-weight: bold;
+  font-family: OpenSansBold, sans-serif;
+  color: #555555;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+.how__description p {
+  font-size: 14px;
+  font-weight: normal;
+  font-family: OpenSans, sans-serif;
+  color: #555555;
+  line-height: 1;
+}
+.how__one {
+  left: 5%;
+  bottom: 21%;
+}
+.how__one:hover .how__description {
+  -moz-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  -webkit-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+  visibility: visible;
+  opacity: 2;
+  z-index: 2;
+}
+.how__one:hover .how__number {
+  z-index: 3;
+}
+.how__two {
+  left: 10%;
+  bottom: 35%;
+}
+.how__two:hover .how__description {
+  -moz-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  -webkit-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+  visibility: visible;
+  opacity: 2;
+  z-index: 2;
+}
+.how__two:hover .how__number {
+  z-index: 3;
+}
+.how__three {
+  left: 24%;
+  bottom: 66%;
+}
+.how__three:hover .how__description {
+  -moz-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  -webkit-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+  visibility: visible;
+  opacity: 2;
+  z-index: 2;
+}
+.how__three:hover .how__number {
+  z-index: 3;
+}
+.how__four {
+  left: 28%;
+  bottom: 43%;
+}
+.how__four:hover .how__description {
+  -moz-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  -webkit-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+  visibility: visible;
+  opacity: 2;
+  z-index: 2;
+}
+.how__four:hover .how__number {
+  z-index: 3;
+}
+.how__five {
+  left: 58%;
+  bottom: 31%;
+}
+.how__five:hover .how__description {
+  -moz-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  -webkit-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+  visibility: visible;
+  opacity: 2;
+  z-index: 2;
+}
+.how__five:hover .how__number {
+  z-index: 3;
+}
+.how__six {
+  left: 16%;
+  bottom: 21%;
+}
+.how__six:hover .how__description {
+  -moz-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  -webkit-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+  visibility: visible;
+  opacity: 2;
+  z-index: 2;
+}
+.how__six:hover .how__number {
+  z-index: 3;
+}
+.how__seven {
+  left: 34%;
+  bottom: 21%;
+}
+.how__seven:hover .how__description {
+  -moz-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  -webkit-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+  visibility: visible;
+  opacity: 2;
+  z-index: 2;
+}
+.how__seven:hover .how__number {
+  z-index: 3;
 }
 
 .how__one, .how__two, .how__three, .how__four, .how__five, .how__six, .how__seven {
   display: inline-block;
-  position: relative;
+  position: absolute;
 }
 
 /* RESPONSIVE */

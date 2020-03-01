@@ -138,8 +138,8 @@
         padding: 0 40px
         line-height: 100px
         color: $white
-        background: rgb(150,194,43)
-        background: linear-gradient(90deg, rgba(150,194,43,1) 0%, rgba(84,126,28,1) 60%)
+        background: rgb(150, 194, 43)
+        background: linear-gradient(90deg, rgba(150, 194, 43, 1) 0%, rgba(84, 126, 28, 1) 60%)
         margin-left: -30px
         position: relative
         z-index: 2
@@ -251,7 +251,7 @@
         left: 0
         right: 0
         bottom: 0
-        background: rgba(84,126,28, 0.7)
+        background: rgba(84, 126, 28, 0.7)
         overflow: hidden
 
         .advantages__item__title
@@ -278,6 +278,7 @@
   background-size: 100% 60%
 
 .how
+  padding-top: 60px
 
   .innerTitle
     margin-bottom: 20px
@@ -294,18 +295,144 @@
     @include font($white, $extraBold, 800, 30px, 34px)
     width: 40px
     height: 40px
-    border: 3px solid $white
+    border: 3px solid rgba(255, 255, 255, 0.5)
     @include box-shadow(0 0 10px rgba(0, 0, 0, 0.5))
     +border-radius(50%)
     text-align: center
+    position: relative
+    z-index: 1
+    @include transition()
 
     &:hover
       cursor: pointer
+      @include transition()
       background: $lightGreen
+
+  &__description
+    background: $white
+    border: 6px solid rgba(255, 255, 255, 0.1)
+    @include box-shadow(0 0 10px rgba(0, 0, 0, 0.5))
+    border-bottom: none
+    padding: 15px 40px 25px 20px
+    +border-radius(10px)
+    position: absolute
+    width: 400px
+    +transform(translate(20px, -20px))
+    z-index: 0
+    opacity: 0
+    @include transition()
+    visibility: hidden
+
+    &__title
+      @include font($family: $bold, $weight: bold)
+      margin-bottom: 10px
+
+    p
+      @include font($family: $regular, $size: 14px)
+
+  &__one
+    left: 5%
+    bottom: 21%
+
+    &:hover
+      .how__description
+        @include transition()
+        visibility: visible
+        opacity: 2
+        z-index: 2
+
+      .how__number
+        z-index: 3
+
+  &__two
+    left: 10%
+    bottom: 35%
+
+    &:hover
+      .how__description
+        @include transition()
+        visibility: visible
+        opacity: 2
+        z-index: 2
+
+      .how__number
+        z-index: 3
+
+  &__three
+    left: 24%
+    bottom: 66%
+
+    &:hover
+      .how__description
+        @include transition()
+        visibility: visible
+        opacity: 2
+        z-index: 2
+
+      .how__number
+        z-index: 3
+
+  &__four
+    left: 28%
+    bottom: 43%
+
+    &:hover
+      .how__description
+        @include transition()
+        visibility: visible
+        opacity: 2
+        z-index: 2
+
+      .how__number
+        z-index: 3
+
+  &__five
+    left: 58%
+    bottom: 31%
+
+    &:hover
+      .how__description
+        @include transition()
+        visibility: visible
+        opacity: 2
+        z-index: 2
+
+      .how__number
+        z-index: 3
+
+  &__six
+    left: 16%
+    bottom: 21%
+
+    &:hover
+      .how__description
+        @include transition()
+        visibility: visible
+        opacity: 2
+        z-index: 2
+
+      .how__number
+        z-index: 3
+
+  &__seven
+    left: 34%
+    bottom: 21%
+
+    &:hover
+      .how__description
+        @include transition()
+        visibility: visible
+        opacity: 2
+        z-index: 2
+
+      .how__number
+        z-index: 3
+
+
 
 .how__one, .how__two, .how__three, .how__four, .how__five, .how__six, .how__seven
   display: inline-block
-  position: relative
+  position: absolute
 
 /* RESPONSIVE */
 @import "responsive"
