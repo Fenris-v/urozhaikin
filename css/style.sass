@@ -428,11 +428,327 @@
       .how__number
         z-index: 3
 
-
-
 .how__one, .how__two, .how__three, .how__four, .how__five, .how__six, .how__seven
   display: inline-block
   position: absolute
+
+.s_offer
+  margin-bottom: $margin
+
+.offer
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+
+  &_half
+    width: 49%
+    position: relative
+    align-items: center
+    margin-bottom: 40px
+
+  &__list
+    display: flex
+    flex-direction: column
+
+    li
+      margin-bottom: 10px
+      max-width: 90%
+
+  &__tab
+    padding: 5px 30px 5px 10px
+    @include font()
+    display: flex
+    justify-content: flex-start
+    @include transition()
+
+    &_active
+      @include box-shadow()
+      border-radius: 20px
+
+    &::before
+      font-size: 30px
+      line-height: $fontSize
+      color: $lightGreen
+      content: "\2022"
+      height: 100%
+      margin-right: 10px
+
+    &:hover
+      @include box-shadow()
+      border-radius: 20px
+      @include transition()
+
+  &__item
+    opacity: 0
+    position: absolute
+    max-height: 420px
+    visibility: hidden
+
+    &_active
+      opacity: 1
+      visibility: visible
+
+  &__price
+    +box-sizing(border-box)
+    border: 2px solid $white
+    text-align: center
+    border-radius: 50%
+    padding: 15px
+
+    &__wrapper
+      position: absolute
+      right: 0
+      bottom: 0
+      border-radius: 50%
+      background: $lightGreen
+      padding: 5px
+
+    &__title
+      @include font($white, $extraBold, 800, 20px)
+
+    &__value
+      @include font($darkGreen, $extraBold, 800, 48px)
+
+    p
+      @include font($darkGreen, $regular, normal, $fontSmall)
+
+  &__info
+    max-width: 80%
+    display: flex
+    justify-content: flex-start
+    align-items: flex-start
+
+    img
+      width: 40px
+      margin-right: 20px
+
+    p
+      @include font($textBlack, $italic, normal, 16px, 1.2)
+
+.s_docs
+  max-width: 1920px
+  margin: 0 auto
+  background: $greyBg
+
+.docs
+  display: flex
+  justify-content: space-between
+
+  &__item
+    width: 30%
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    padding: 40px 0
+
+    img
+      width: 60px
+      +object-fit(contain)
+      margin-right: 20px
+
+    p
+      @include font($textBlack, $extraBold, 800, 16px)
+      margin-bottom: 5px
+
+    a
+      @include font($lightGreen, $italic, normal, 16px)
+      text-decoration: underline
+      display: inline-block
+
+    &__text_small
+      font-weight: normal !important
+      font-family: $regular !important
+
+.s_consult
+  max-width: 1920px
+  margin: 0 auto $margin
+  background: url("../images/main/consult-bg.jpg")
+
+.consult
+  .innerTitle
+    color: $white
+
+  ul
+    display: flex
+    justify-content: flex-start
+    padding-bottom: 40px
+
+  li
+    width: 300px
+    margin-right: 10px
+
+  input[type="text"]
+    background: $white
+    outline: none
+    border: none
+    width: 100%
+    height: 40px
+    padding: 0 20px
+    @include font($textBlack, $bold, bold, 16px, 40px)
+
+    &::placeholder
+      @include font($grey, $regular, normal, 16px, 40px)
+
+  input[type="submit"]
+    border: none
+    outline: none
+    width: 100%
+
+.s_license
+  margin-bottom: $margin
+
+.license
+  p
+    @include font()
+    width: 90%
+    margin-bottom: 20px
+
+  &__items
+    display: flex
+    justify-content: space-between
+
+    a
+      width: 23%
+      display: flex
+      align-items: center
+
+      img
+        width: 100%
+        +object-fit(contain)
+
+.s_feedback
+  margin-bottom: $margin
+
+.feedback
+  &__slider__item
+    padding: 10px
+    @include box-shadow()
+    +border-radius(5px)
+    width: 60%
+    margin: 0 auto
+    display: flex
+    justify-content: space-between
+
+    img
+      width: 35%
+      +object-fit(cover)
+
+    &__content
+      width: 63%
+      h3
+        @include font($darkGreen, $extraBold, 800, 24px, 30px)
+        margin-bottom: 10px
+
+      p
+        @include font($textBlack, $regular, normal, 16px, 1.2)
+        margin-bottom: 0
+
+        &:last-child
+          margin-bottom: 10px
+
+      &__name
+        @include font($lightGreen, $bold, bold, 16px)
+
+.s_callback
+  max-width: 1920px
+  background: url("../images/main/form-bg.jpg") center no-repeat
+  padding: 40px
+  +box-sizing(border-box)
+
+.callback
+
+  .innerTitle
+    color: $white
+
+  ul
+    display: flex
+    flex-wrap: wrap
+    justify-content: flex-start
+    align-items: center
+
+  li
+    width: 300px
+    margin-right: 10px
+    margin-bottom: 10px
+
+    &:nth-child(2)
+      margin-right: 20%
+
+    input[type="text"]
+      background: $white
+      outline: none
+      border: none
+      width: 100%
+      height: 40px
+      padding: 0 20px
+      @include font($darkGreen, $bold, bold, 16px, 40px)
+
+      &::placeholder
+        @include font($darkGreen, $regular, normal, 16px, 40px)
+
+    input[type="submit"]
+      border: none
+      outline: none
+      width: 200px
+
+/* FOOTER */
+.footer
+  max-width: 1920px
+  margin: 0 auto
+  background: $lightGreen
+
+  &__wrapper
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 5px 0
+
+  &__description
+    @include font($white, $extraBold, 800, $fontSmall, 16px)
+    display: flex
+    justify-content: flex-start
+    align-items: center
+
+    a
+      display: inline-block
+      margin-right: 0
+
+    p
+      padding-top: 20px
+      margin-left: 30px
+
+  &__mail, &__phone
+    display: flex
+    align-items: center
+    padding-top: 20px
+
+    img
+      max-width: 20px
+      margin-right: 5px
+
+    a
+      @include font($white, $semiBold, 600, $fontSmall)
+      display: inline-block
+      white-space: nowrap
+
+.social__links
+  padding-top: 20px
+  display: flex
+
+.social__link
+  padding: 5px
+  background: $darkGreen
+  +border-radius(50%)
+
+  &:first-child
+    margin-right: 10px
+
+  img
+    width: 20px
+    height: 20px
+
+  &:hover
+    @include box-shadow()
 
 /* RESPONSIVE */
 @import "responsive"
