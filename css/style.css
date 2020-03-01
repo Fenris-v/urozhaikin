@@ -805,6 +805,7 @@ input[type=email] {
   color: #555555;
   line-height: 1;
   display: flex;
+  border-radius: 20px;
   justify-content: flex-start;
   -moz-transition: all 0.4s ease 0s;
   -o-transition: all 0.4s ease 0s;
@@ -815,7 +816,6 @@ input[type=email] {
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.17);
   -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.17);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.17);
-  border-radius: 20px;
 }
 .offer__tab::before {
   font-size: 30px;
@@ -829,21 +829,15 @@ input[type=email] {
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.17);
   -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.17);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.17);
-  border-radius: 20px;
   -moz-transition: all 0.4s ease 0s;
   -o-transition: all 0.4s ease 0s;
   -webkit-transition: all 0.4s ease 0s;
   transition: all 0.4s ease 0s;
 }
 .offer__item {
-  opacity: 0;
   position: absolute;
   max-height: 420px;
-  visibility: hidden;
-}
-.offer__item_active {
-  opacity: 1;
-  visibility: visible;
+  display: none;
 }
 .offer__price {
   -moz-box-sizing: border-box;
@@ -1031,9 +1025,9 @@ input[type=email] {
   -moz-border-radius: 5px;
   border-radius: 5px;
   width: 60%;
-  margin: 0 auto;
-  display: flex;
+  display: flex !important;
   justify-content: space-between;
+  margin: 10px;
 }
 .feedback__slider__item img {
   width: 35%;
