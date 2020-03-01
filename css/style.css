@@ -1071,6 +1071,7 @@ input[type=email] {
 }
 
 .s_callback {
+  margin: 0 auto;
   max-width: 1920px;
   background: url("../images/main/form-bg.jpg") center no-repeat;
   padding: 40px;
