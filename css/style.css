@@ -235,6 +235,7 @@ input[type=email] {
   display: flex;
   align-items: center;
   padding-top: 20px;
+  min-width: 170px;
 }
 .header_top__mail img {
   max-width: 20px;
@@ -259,6 +260,7 @@ input[type=email] {
   color: #547e1c;
   line-height: 1;
   display: inline-block;
+  white-space: nowrap;
 }
 .header_top__phone a span {
   color: #96c22b;
@@ -272,6 +274,7 @@ input[type=email] {
   text-transform: lowercase;
 }
 .header_top .btn {
+  white-space: nowrap;
   margin-top: 20px;
 }
 .header__nav {
@@ -1024,10 +1027,14 @@ input[type=email] {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-  width: 60%;
   display: flex !important;
   justify-content: space-between;
   margin: 10px;
+  opacity: 0.5;
+  -moz-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  -webkit-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
 }
 .feedback__slider__item img {
   width: 35%;
@@ -1053,15 +1060,42 @@ input[type=email] {
   line-height: 1.2;
   margin-bottom: 0;
 }
-.feedback__slider__item__content p:last-child {
-  margin-bottom: 10px;
-}
 .feedback__slider__item__content__name {
   font-size: 16px;
   font-weight: bold;
   font-family: OpenSansBold, sans-serif;
   color: #96c22b;
   line-height: 1;
+  padding-top: 10px;
+}
+
+.slick-active {
+  opacity: 1;
+  -moz-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  -webkit-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+
+.slick-dots {
+  display: flex;
+  justify-content: center;
+}
+.slick-dots li button {
+  font-size: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #9c9c9c;
+  outline: none;
+  border: none;
+  margin-right: 5px;
+}
+.slick-dots li button:hover {
+  cursor: pointer;
+}
+.slick-dots .slick-active button {
+  background: #96c22b;
 }
 
 .s_callback {
@@ -1231,6 +1265,38 @@ input[type=email] {
 @font-face {
   font-family: OpenSansExtraBold;
   src: url(../fonts/OpenSans-ExtraBold.ttf);
+}
+@media only screen and (max-width: 1200px) {
+  .wrapper {
+    padding: 0 15px;
+  }
+
+  .header_top__description {
+    flex-direction: column;
+  }
+  .header_top__description p {
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    padding: 0;
+  }
+
+  .header__nav ul li {
+    margin-right: 15px;
+  }
+
+  .firstScreen_half h1 span {
+    margin-left: -15px;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .header__nav {
+    display: none;
+  }
+
+  .header_top .btn {
+    margin-right: 50px;
+  }
 }
 /* HAMBURGER */
 @font-face {

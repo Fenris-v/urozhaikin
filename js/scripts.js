@@ -24,7 +24,7 @@ $(document).ready(() => {
      */
     $('.feedback__slider').slick({
         centerMode: true,
-        centerPadding: '120px',
+        centerPadding: '200px',
         slidesToShow: 1,
         arrows: false,
         infinite: true,

@@ -42,6 +42,7 @@
       display: flex
       align-items: center
       padding-top: 20px
+      min-width: 170px
 
       img
         max-width: 20px
@@ -58,6 +59,7 @@
       a
         @include font($darkGreen, $extraBold, 800, 24px)
         display: inline-block
+        white-space: nowrap
 
         span
           color: $lightGreen
@@ -67,6 +69,7 @@
         text-transform: lowercase
 
     .btn
+      white-space: nowrap
       margin-top: 20px
 
   &__nav
@@ -618,10 +621,11 @@
     padding: 10px
     @include box-shadow()
     +border-radius(5px)
-    width: 60%
     display: flex !important
     justify-content: space-between
     margin: 10px
+    opacity: 0.5
+    @include transition()
 
     img
       width: 35%
@@ -637,11 +641,37 @@
         @include font($textBlack, $regular, normal, 16px, 1.2)
         margin-bottom: 0
 
-        &:last-child
-          margin-bottom: 10px
-
       &__name
         @include font($lightGreen, $bold, bold, 16px)
+        padding-top: 10px
+
+.slick-active
+  opacity: 1
+  @include transition()
+
+.slick-dots
+  display: flex
+  justify-content: center
+
+  li
+
+
+    button
+      font-size: 0
+      width: 10px
+      height: 10px
+      border-radius: 50%
+      background: $grey
+      outline: none
+      border: none
+      margin-right: 5px
+
+      &:hover
+        cursor: pointer
+
+  .slick-active
+    button
+      background: $lightGreen
 
 .s_callback
   margin: 0 auto
