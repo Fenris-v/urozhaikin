@@ -946,9 +946,13 @@ input[type=email] {
 .s_consult {
   max-width: 1920px;
   margin: 0 auto 80px;
-  background: url("../images/main/consult-bg.jpg");
+  background: url("../images/main/consult-bg.jpg") center center no-repeat;
+  background-size: cover;
 }
 
+.consult {
+  padding-top: 20px;
+}
 .consult .innerTitle {
   color: #ffffff;
 }
@@ -1010,15 +1014,19 @@ input[type=email] {
   align-items: center;
 }
 .license__items a img {
+  height: 100%;
   width: 100%;
-  -o-object-fit: contain;
-  object-fit: contain;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .s_feedback {
   margin-bottom: 80px;
 }
 
+.feedback__slider {
+  position: relative;
+}
 .feedback__slider__item {
   padding: 10px;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.17);
@@ -1029,8 +1037,7 @@ input[type=email] {
   border-radius: 5px;
   display: flex !important;
   justify-content: space-between;
-  margin: 10px;
-  opacity: 0.5;
+  margin: 10px 30px 10px 30px;
   -moz-transition: all 0.4s ease 0s;
   -o-transition: all 0.4s ease 0s;
   -webkit-transition: all 0.4s ease 0s;
@@ -1069,12 +1076,27 @@ input[type=email] {
   padding-top: 10px;
 }
 
-.slick-active {
-  opacity: 1;
-  -moz-transition: all 0.4s ease 0s;
-  -o-transition: all 0.4s ease 0s;
-  -webkit-transition: all 0.4s ease 0s;
-  transition: all 0.4s ease 0s;
+.slick-arrow {
+  position: absolute;
+  top: 45%;
+  border: none;
+  background: transparent;
+  color: transparent;
+  font-size: 0;
+  width: 20px;
+  height: 20px;
+}
+
+.slick-prev {
+  left: 0;
+  background: url("../images/icons/arrow-left-solid.svg") center no-repeat;
+  background-size: 100%;
+}
+
+.slick-next {
+  right: 0;
+  background: url("../images/icons/arrow-right-solid.svg") center no-repeat;
+  background-size: 100%;
 }
 
 .slick-dots {
@@ -1102,7 +1124,8 @@ input[type=email] {
   margin: 0 auto;
   max-width: 1920px;
   background: url("../images/main/form-bg.jpg") center no-repeat;
-  padding: 40px;
+  background-size: cover;
+  padding: 40px 0;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -1180,6 +1203,12 @@ input[type=email] {
 .footer__description p {
   padding-top: 20px;
   margin-left: 30px;
+}
+.footer__mail {
+  width: 170px;
+}
+.footer__phone {
+  width: 150px;
 }
 .footer__mail, .footer__phone {
   display: flex;
@@ -1296,6 +1325,296 @@ input[type=email] {
 
   .header_top .btn {
     margin-right: 50px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .how__description {
+    padding-right: 20px;
+    width: 350px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .header_top {
+    flex-wrap: wrap;
+  }
+  .header_top__description {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    margin-right: 50px;
+  }
+  .header_top__description p {
+    width: auto;
+  }
+  .header_top .btn {
+    margin-right: 0;
+  }
+
+  .s_firstScreen, .s_advantages, .s_how, .s_offer, .s_consult, .s_license, .s_feedback {
+    margin-bottom: 60px;
+  }
+
+  .firstScreen_half h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+  .firstScreen_half p {
+    font-size: 16px;
+  }
+
+  .innerTitle {
+    font-size: 35px;
+  }
+  .innerTitle span {
+    font-size: 25px;
+  }
+
+  .advantages__item {
+    width: 49.5%;
+  }
+  .advantages__item:last-child {
+    margin: 0 auto;
+  }
+
+  .advantages__item__title {
+    font-size: 20px !important;
+  }
+
+  .s_how {
+    background-size: 100% 300px;
+  }
+
+  .how__one, .how__two, .how__three, .how__four, .how__five, .how__six, .how__seven {
+    position: static;
+    width: 90%;
+  }
+
+  .how__description {
+    visibility: visible;
+    opacity: 1;
+    position: relative;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  .offer_half {
+    width: 100%;
+  }
+
+  .offer__tab {
+    font-size: 16px;
+  }
+
+  .offer__listItems {
+    height: 400px;
+  }
+
+  .offer__item {
+    position: static;
+    -o-object-fit: contain;
+    object-fit: contain;
+    text-align: center;
+  }
+
+  .offer__info {
+    max-width: 100%;
+  }
+
+  .docs__item img {
+    width: 40px;
+  }
+
+  .docs__item a {
+    font-size: 14px;
+  }
+
+  .consult ul {
+    flex-direction: column;
+  }
+  .consult ul li {
+    margin-bottom: 10px;
+    width: 80%;
+  }
+
+  .innerTitle span {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .feedback .innerTitle span {
+    font-size: 22px;
+  }
+
+  .callback li:nth-child(2) {
+    margin-right: 0;
+  }
+
+  .footer__wrapper {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .footer__description {
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .footer__mail, .footer__phone, .social__links {
+    padding-top: 10px;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .header_top__description {
+    flex-direction: column;
+    margin: 0 auto 0 0;
+    max-width: 75%;
+  }
+
+  .header_top__description p {
+    font-size: 14px;
+  }
+
+  .header_top__phone {
+    padding-top: 10px;
+    text-align: left;
+  }
+
+  .header_top .btn {
+    margin-top: 10px;
+  }
+
+  .header_top {
+    align-items: center;
+  }
+
+  .firstScreen {
+    flex-wrap: wrap;
+  }
+
+  .firstScreen_half {
+    width: 100%;
+  }
+
+  .firstScreen_half h1 {
+    font-size: 25px;
+  }
+
+  .firstScreen_half h1 span {
+    line-height: 1.4;
+    width: 100%;
+    margin: 0;
+    display: block;
+  }
+
+  .firstScreen_half p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .s_firstScreen, .s_advantages, .s_how, .s_offer, .s_consult, .s_license, .s_feedback {
+    margin-bottom: 30px;
+  }
+
+  .innerTitle {
+    font-size: 25px;
+  }
+  .innerTitle span {
+    font-size: 18px;
+  }
+
+  .advantages__item {
+    width: 100%;
+  }
+
+  .advantages__item__title {
+    font-size: 16px !important;
+  }
+
+  .advantages__item a .advantages__item_hover p {
+    font-size: 14px;
+  }
+
+  .advantages__item a .advantages__item_hover .advantages__item__title {
+    height: 40px;
+  }
+
+  .offer__listItems {
+    height: auto;
+  }
+
+  .offer__price__wrapper {
+    position: static;
+    max-width: 220px;
+    margin: 0 auto;
+  }
+
+  .offer__price__title {
+    font-size: 16px;
+  }
+
+  .offer__price__value {
+    font-size: 25px;
+  }
+
+  .docs {
+    flex-direction: column;
+  }
+
+  .docs__item {
+    width: 100%;
+    padding-bottom: 0;
+  }
+  .docs__item:last-child {
+    padding-bottom: 40px;
+  }
+
+  .consult ul li {
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .license p {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .license__items {
+    flex-wrap: wrap;
+  }
+
+  .license__items a {
+    width: 48%;
+  }
+
+  .feedback__slider__item {
+    margin: 10px 0;
+    flex-direction: column;
+  }
+
+  .feedback__slider__item img, .feedback__slider__item__content {
+    width: 100%;
+  }
+
+  .feedback__slider__item__content h3 {
+    font-size: 18px;
+  }
+
+  .feedback__slider__item__content p {
+    font-size: 14px;
+  }
+
+  .callback li {
+    margin-right: 0;
+  }
+
+  .callback li input[type=submit] {
+    width: 100%;
+  }
+
+  .footer__description {
+    flex-direction: column;
   }
 }
 /* HAMBURGER */

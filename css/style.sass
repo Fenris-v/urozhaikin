@@ -559,9 +559,12 @@
 .s_consult
   max-width: 1920px
   margin: 0 auto $margin
-  background: url("../images/main/consult-bg.jpg")
+  background: url("../images/main/consult-bg.jpg") center center no-repeat
+  background-size: cover
 
 .consult
+  padding-top: 20px
+
   .innerTitle
     color: $white
 
@@ -610,51 +613,69 @@
       align-items: center
 
       img
+        height: 100%
         width: 100%
-        +object-fit(contain)
+        +object-fit(cover)
 
 .s_feedback
   margin-bottom: $margin
 
 .feedback
-  &__slider__item
-    padding: 10px
-    @include box-shadow()
-    +border-radius(5px)
-    display: flex !important
-    justify-content: space-between
-    margin: 10px
-    opacity: 0.5
-    @include transition()
+  &__slider
+    position: relative
 
-    img
-      width: 35%
-      +object-fit(cover)
+    &__item
+      padding: 10px
+      @include box-shadow()
+      +border-radius(5px)
+      display: flex !important
+      justify-content: space-between
+      margin: 10px 30px 10px 30px
+      @include transition()
 
-    &__content
-      width: 63%
-      h3
-        @include font($darkGreen, $extraBold, 800, 24px, 30px)
-        margin-bottom: 10px
+      img
+        width: 35%
+        +object-fit(cover)
 
-      p
-        @include font($textBlack, $regular, normal, 16px, 1.2)
-        margin-bottom: 0
+      &__content
+        width: 63%
+        h3
+          @include font($darkGreen, $extraBold, 800, 24px, 30px)
+          margin-bottom: 10px
 
-      &__name
-        @include font($lightGreen, $bold, bold, 16px)
-        padding-top: 10px
+        p
+          @include font($textBlack, $regular, normal, 16px, 1.2)
+          margin-bottom: 0
 
-.slick-active
-  opacity: 1
-  @include transition()
+        &__name
+          @include font($lightGreen, $bold, bold, 16px)
+          padding-top: 10px
+
+.slick-arrow
+  position: absolute
+  top: 45%
+  border: none
+  background: transparent
+  color: transparent
+  font-size: 0
+  width: 20px
+  height: 20px
+
+.slick-prev
+  left: 0
+  background: url("../images/icons/arrow-left-solid.svg") center no-repeat
+  background-size: 100%
+
+.slick-next
+  right: 0
+  background: url("../images/icons/arrow-right-solid.svg") center no-repeat
+  background-size: 100%
 
 .slick-dots
   display: flex
   justify-content: center
 
   li
-
 
     button
       font-size: 0
@@ -677,7 +698,8 @@
   margin: 0 auto
   max-width: 1920px
   background: url("../images/main/form-bg.jpg") center no-repeat
-  padding: 40px
+  background-size: cover
+  padding: 40px 0
   +box-sizing(border-box)
 
 .callback
@@ -741,6 +763,12 @@
     p
       padding-top: 20px
       margin-left: 30px
+
+  &__mail
+    width: 170px
+
+  &__phone
+    width: 150px
 
   &__mail, &__phone
     display: flex

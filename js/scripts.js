@@ -23,11 +23,15 @@ $(document).ready(() => {
      * SLIDER
      */
     $('.feedback__slider').slick({
-        centerMode: true,
-        centerPadding: '200px',
         slidesToShow: 1,
-        arrows: false,
+        arrows: true,
         infinite: true,
-        dots: true
+        dots: true,
+        responsive: [{
+            breakpoint: 640,
+            settings: {
+                arrows: false
+            }
+        }]
     });
 });
