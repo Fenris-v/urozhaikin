@@ -1254,6 +1254,108 @@ input[type=email] {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.17);
 }
 
+/* MODAL */
+.modal {
+  display: none;
+}
+
+.scroll-disable {
+  overflow: hidden;
+}
+
+.fancybox-slide--html .fancybox-close-small {
+  color: #547e1c;
+  -moz-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  -webkit-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+
+.fancybox-slide--html .fancybox-close-small:hover {
+  color: #96c22b;
+  -moz-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  -webkit-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+
+.modal-default {
+  max-width: 430px;
+  padding: 50px;
+  width: 100%;
+  background: #ebebeb;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.modal-default__title {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: OpenSansSemiBold, sans-serif;
+  color: #547e1c;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+.modal__personaldata {
+  margin: 20px 0;
+  font-size: 18px;
+  font-weight: normal;
+  font-family: OpenSans, sans-serif;
+  color: #547e1c;
+  line-height: 1;
+  line-height: 1.3;
+}
+
+.modal__personaldata a {
+  font-size: 18px;
+  font-weight: normal;
+  font-family: OpenSans, sans-serif;
+  color: #547e1c;
+  line-height: 1;
+  text-decoration: underline;
+}
+
+.modal__personaldata a:hover {
+  color: #96c22b;
+  text-decoration: none;
+}
+
+.default-form__group input {
+  background: #ffffff;
+  margin-bottom: 10px;
+  width: 100%;
+  outline: none;
+  line-height: 40px;
+  border: none;
+  padding: 0 10px;
+}
+
+.default-form__group button {
+  border: none;
+  outline: none;
+  height: auto;
+  color: #ffffff;
+  width: 100%;
+  -moz-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  -webkit-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+.default-form__group button:hover {
+  -moz-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  -webkit-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+
+#feedback-modal {
+  text-align: left;
+}
+
 /* RESPONSIVE */
 @font-face {
   font-family: OpenSans;
@@ -1658,7 +1760,7 @@ input[type=email] {
   font-family: OpenSansExtraBold;
   src: url(../fonts/OpenSans-ExtraBold.ttf);
 }
-.header__hamburger {
+.header__hamburger, .headerNav_adaptive {
   display: none;
 }
 

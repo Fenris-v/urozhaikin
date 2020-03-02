@@ -803,6 +803,70 @@
   &:hover
     @include box-shadow()
 
+/* MODAL */
+.modal
+  display: none
+
+.scroll-disable
+  overflow: hidden
+
+.fancybox-slide--html .fancybox-close-small
+  color: $darkGreen
+  @include transition()
+
+.fancybox-slide--html .fancybox-close-small:hover
+  color: $lightGreen
+  @include transition()
+
+.modal-default
+  max-width: 430px
+  padding: 50px
+  width: 100%
+  background: $greyBg
+  border-radius: 3px
+  +border-radius(3px)
+  text-align: center
+
+.modal-default__title
+  @include font($darkGreen, $semiBold, bold, 20px, 1.3)
+  margin-bottom: 20px
+
+.modal__personaldata
+  margin: 20px 0
+  @include font($darkGreen)
+  line-height: 1.3
+
+.modal__personaldata a
+  @include font($darkGreen)
+  text-decoration: underline
+
+.modal__personaldata a:hover
+  color: $lightGreen
+  text-decoration: none
+
+.default-form__group input
+  background: $white
+  margin-bottom: 10px
+  width: 100%
+  outline: none
+  line-height: 40px
+  border: none
+  padding: 0 10px
+
+.default-form__group button
+  border: none
+  outline: none
+  height: auto
+  color: $white
+  width: 100%
+  @include transition()
+
+  &:hover
+    @include transition()
+
+#feedback-modal
+  text-align: left
+
 /* RESPONSIVE */
 @import "responsive"
 /* HAMBURGER */
