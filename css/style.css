@@ -1658,6 +1658,10 @@ input[type=email] {
   font-family: OpenSansExtraBold;
   src: url(../fonts/OpenSans-ExtraBold.ttf);
 }
+.header__hamburger {
+  display: none;
+}
+
 .adaptive-menu-toggle {
   display: block;
   width: 30px;
@@ -1680,7 +1684,7 @@ input[type=email] {
 
 .menu-toggle-line {
   position: absolute;
-  background: #555555;
+  background: #96c22b;
   display: block;
   margin: auto;
   height: 4px;
@@ -1737,7 +1741,7 @@ input[type=email] {
 }
 
 .adaptive-menu-toggle--open .menu-toggle-line {
-  background: #555555;
+  background: #96c22b;
 }
 
 .adaptive-menu-toggle--open .menu-toggle-line--1 {
@@ -1790,7 +1794,7 @@ input[type=email] {
   -moz-transition: opacity 0.2s ease 0.4s, transform 0.2s ease 0.4s, -moz-transform 0.2s ease 0.4s;
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 1100px) {
   .header__hamburger {
     display: block !important;
     position: absolute;
@@ -1799,7 +1803,7 @@ input[type=email] {
   }
 
   .headerNav_adaptive {
-    background: #555555;
+    background: #ebebeb;
     display: none;
     padding-top: 60px;
     position: absolute;
@@ -1824,10 +1828,10 @@ input[type=email] {
   }
 
   .headerNav__items_adaptive a {
-    background: #555555;
+    background: #ebebeb;
     border: #555555 1px solid;
     border-bottom: none;
-    color: #555555;
+    color: #96c22b;
     display: block;
     font-family: "Museo Sans Cyrl -300", sans-serif;
     font-size: 17px;
