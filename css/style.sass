@@ -130,7 +130,12 @@
   justify-content: space-between
 
   &_half
-    width: 49%
+
+    &:first-child
+      width: 44%
+
+    &:last-child
+      width: 64%
 
     h1
       @include font($blue, $extraBold, 800, 68px)
@@ -179,6 +184,15 @@
   &__item
     width: 33%
     margin-bottom: 5px
+
+    &__gradient
+      background: rgb(28,43,9)
+      background: linear-gradient(0deg, rgba(28,43,9,1) 0%, rgba(150,194,43,0.2) 40%)
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
 
     &_noHover
       position: absolute
@@ -490,7 +504,9 @@
     border: 2px solid $white
     text-align: center
     border-radius: 50%
-    padding: 15px
+    padding-top: 45px
+    width: 200px
+    height: 200px
 
     &__wrapper
       position: absolute
@@ -499,6 +515,8 @@
       border-radius: 50%
       background: $lightGreen
       padding: 5px
+      width: 210px
+      height: 210px
 
     &__title
       @include font($white, $extraBold, 800, 20px)

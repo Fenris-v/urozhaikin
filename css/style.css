@@ -350,8 +350,11 @@ input[type=email] {
   display: flex;
   justify-content: space-between;
 }
-.firstScreen_half {
-  width: 49%;
+.firstScreen_half:first-child {
+  width: 44%;
+}
+.firstScreen_half:last-child {
+  width: 64%;
 }
 .firstScreen_half h1 {
   font-size: 68px;
@@ -419,6 +422,15 @@ input[type=email] {
 .advantages__item {
   width: 33%;
   margin-bottom: 5px;
+}
+.advantages__item__gradient {
+  background: #1c2b09;
+  background: linear-gradient(0deg, #1c2b09 0%, rgba(150, 194, 43, 0.2) 40%);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 .advantages__item_noHover {
   position: absolute;
@@ -849,7 +861,9 @@ input[type=email] {
   border: 2px solid #ffffff;
   text-align: center;
   border-radius: 50%;
-  padding: 15px;
+  padding-top: 45px;
+  width: 200px;
+  height: 200px;
 }
 .offer__price__wrapper {
   position: absolute;
@@ -858,6 +872,8 @@ input[type=email] {
   border-radius: 50%;
   background: #96c22b;
   padding: 5px;
+  width: 210px;
+  height: 210px;
 }
 .offer__price__title {
   font-size: 20px;
