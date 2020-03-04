@@ -58,4 +58,27 @@ $(document).ready(() => {
         }
     });
 
+    /**
+     * ANCHOR
+     */
+    let headerNav = $('.header__nav');
+    let headerNavAdaptive = $('.headerNav_adaptive');
+    let sDocument = $('body, html');
+
+    let onClickNav = (e) => {
+        sDocument.stop(true, false);
+        e.preventDefault();
+        let id = $(e.target).attr('href'),
+            top = $(id).offset().top - 80;
+        sDocument.animate({scrollTop: top}, 1500);
+        console.log(123);
+    };
+
+    headerNavAdaptive.on('click', 'a', (e) => {
+        onClickNav(e)
+    });
+
+    headerNav.on('click', 'a', (e) => {
+        onClickNav(e)
+    });
 });
