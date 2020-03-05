@@ -187,7 +187,7 @@
 
     &__gradient
       background: rgb(28,43,9)
-      background: linear-gradient(0deg, rgba(28,43,9,1) 0%, rgba(150,194,43,0.2) 40%)
+      background: linear-gradient(0deg, rgba(28,43,9,1) 0%, rgba(150,194,43,0.2) 60%)
       position: absolute
       top: 0
       bottom: 0
@@ -215,6 +215,9 @@
             @include transition()
             opacity: 0
 
+        svg
+          color: $lightGreen
+
         .advantages__item_hover
           top: 0
           @include transition()
@@ -240,14 +243,18 @@
         width: 100%
         +object-fit(cover)
 
-      .advantages__item__icon
-        width: 50px
+      svg
+        width: 50px !important
         height: 50px
         position: absolute
         left: 30px
-        bottom: 80px
+        bottom: 70px
         opacity: 1
         @include transition()
+        padding: 10px
+        border: 2px solid $lightGreen
+        +border-radius(50%)
+        color: $lightGreen
 
       .advantages__item_noHover
         @include transition()
@@ -679,6 +686,8 @@
   font-size: 0
   width: 20px
   height: 20px
+  cursor: pointer
+  z-index: 1
 
 .slick-prev
   left: 0

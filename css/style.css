@@ -425,7 +425,7 @@ input[type=email] {
 }
 .advantages__item__gradient {
   background: #1c2b09;
-  background: linear-gradient(0deg, #1c2b09 0%, rgba(150, 194, 43, 0.2) 40%);
+  background: linear-gradient(0deg, #1c2b09 0%, rgba(150, 194, 43, 0.2) 60%);
   position: absolute;
   top: 0;
   bottom: 0;
@@ -457,6 +457,9 @@ input[type=email] {
   -webkit-transition: all 0.4s ease 0s;
   transition: all 0.4s ease 0s;
   opacity: 0;
+}
+.advantages__item a:hover svg {
+  color: #96c22b;
 }
 .advantages__item a:hover .advantages__item_hover {
   top: 0;
@@ -496,17 +499,23 @@ input[type=email] {
   -o-object-fit: cover;
   object-fit: cover;
 }
-.advantages__item a .advantages__item__icon {
-  width: 50px;
+.advantages__item a svg {
+  width: 50px !important;
   height: 50px;
   position: absolute;
   left: 30px;
-  bottom: 80px;
+  bottom: 70px;
   opacity: 1;
   -moz-transition: all 0.4s ease 0s;
   -o-transition: all 0.4s ease 0s;
   -webkit-transition: all 0.4s ease 0s;
   transition: all 0.4s ease 0s;
+  padding: 10px;
+  border: 2px solid #96c22b;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  color: #96c22b;
 }
 .advantages__item a .advantages__item_noHover {
   -moz-transition: all 0.4s ease 0s;
@@ -1102,6 +1111,8 @@ input[type=email] {
   font-size: 0;
   width: 20px;
   height: 20px;
+  cursor: pointer;
+  z-index: 1;
 }
 
 .slick-prev {
